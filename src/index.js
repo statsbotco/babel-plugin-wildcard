@@ -25,7 +25,7 @@ export default function (babel) {
         
         if (addWildcard) {
           var obj = t.variableDeclaration(
-            "const", [
+            "var", [
             t.variableDeclarator(t.identifier(wildcardName), t.objectExpression([]))
           ]);
           path.insertBefore(obj);
